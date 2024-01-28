@@ -1,6 +1,4 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
@@ -9,10 +7,10 @@ function App() {
 
   const addValue = () => {
     // console.log("Clicked", Math.random());
-    // if (counter < 20) {
-    //   counter = counter + 1;
-    //   setCounter(counter);
-    // }
+    if (counter < 20) {
+      counter = counter + 1;
+      setCounter(counter);
+    }
     // setCounter(counter + 1);
     // setCounter(counter + 1);
     // setCounter(counter + 1);
@@ -24,9 +22,9 @@ function App() {
     // If you need to perform state updates based on the previous state,
     // it's better to use the functional form of setCounter that takes a callback function:
 
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1);
-    setCounter((prevCounter) => prevCounter + 1); //setCounter(counter=> counter+ 1);  also works..arrow function takes the previous state as an argument and returns the new state. we can use any name in place of setCounter    setCounter((prevCounter) => prevCounter + 1); //equivalent: setCounter(prevCounter => prevCounter + 4);
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1);
+    // setCounter((prevCounter) => prevCounter + 1); //setCounter(counter=> counter+ 1);  also works..arrow function takes the previous state as an argument and returns the new state. we can use any name in place of setCounter    setCounter((prevCounter) => prevCounter + 1); //equivalent: setCounter(prevCounter => prevCounter + 4);
     // The reason React won't batch those updates into a single update in this case is due to
     // the asynchronous nature of state updates and the functional updates with the callback.
     // When you use the functional form of setCounter with a callback, React cannot guarantee
@@ -77,3 +75,40 @@ function App() {
 }
 
 export default App;
+
+// import MyButton from "./components/MyButton";
+
+// function App() {
+//   return (
+//     <>
+{
+  /* <h1>Counters that update separately</h1>; */
+}
+
+//       <MyButton />
+//       <MyButton />
+//     </>
+//   );
+// }
+
+// export default App;
+
+// import MyButton from "./components/MyButton";
+// import { useState } from "react";
+// function App() {
+//   const [count, setCount] = useState(0);
+
+//   function handleClick() {
+//     setCount(count + 1);
+//   }
+
+//   return (
+//     <>
+//       <h1>Counters that update together</h1>
+//       <MyButton count={count} onClick={handleClick} />
+//       <MyButton count={count} onClick={handleClick} />
+//     </>
+//   );
+// }
+
+// export default App;
